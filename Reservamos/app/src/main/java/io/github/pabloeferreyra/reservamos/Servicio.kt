@@ -13,15 +13,16 @@ import java.net.HttpURLConnection
 import java.net.MalformedURLException
 import java.net.URL
 import java.util.*
+import kotlin.collections.ArrayList
 
 /**
  * Created by pablo on 24/12/2017.
  */
 class Servicio {
 
-     fun getData() : JSONArray? {
+     fun getData() : ArrayList<Locales?> {
         var jsonArr: JSONArray? = null
-         var locales : Arrays
+        var locales : ArrayList<Locales?> = ArrayList<Locales?>()
         val dir = "http://192.168.1.11:8081/locales"
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
@@ -56,6 +57,9 @@ class Servicio {
             for (i in 0..jsonArr.length()) {
                 val JsonObject = jsonArr.getJSONObject(i)
 
+                locales[i]?.Nombre?.plus(JsonObject.optString("Nombre"))
+                locales[i]?.Direccion?.plus(JsonObject.optString("Direccion"))
+                locales[i]?.Valuacion?.plus(JsonObject.optInt("Valuacion"))
             }
 
         } catch (e: MalformedURLException) {
@@ -65,7 +69,7 @@ class Servicio {
         } catch (e: JSONException) {
             e.printStackTrace()
         }
-        return jsonArr
+        return locales
     }
 
 }
