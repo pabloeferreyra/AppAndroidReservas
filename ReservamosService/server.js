@@ -6,7 +6,8 @@ var sql = require('mssql'); // MS Sql Server client
 var dbConfig = {
     user:  "SA",
     password: "Adminis7ra7or",
-    server: "192.168.0.6",
+    //server: "192.168.0.6",
+	server: "192.168.1.12",
     database: "Reservamos"
 };
 
