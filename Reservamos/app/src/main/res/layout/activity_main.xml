@@ -13,14 +13,18 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="top|clip_vertical"
-            android:background="@android:color/holo_red_dark">
+            android:background="@android:color/holo_orange_light" >
 
             <ImageView
                 android:id="@+id/logo"
+<<<<<<< HEAD
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:contentDescription="@string/logoapp"
+=======
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+>>>>>>> parent of a10af16... inicio entidades y separado servicio de main
                 android:scaleType="fitStart"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -28,6 +32,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
+<<<<<<< HEAD
                 app:srcCompat="@drawable/logoappalt" />
 
         </TableRow>
@@ -49,6 +54,9 @@
                 </ListView>
 
             </LinearLayout>
+=======
+                app:srcCompat="@drawable/logo" />
+>>>>>>> parent of a10af16... inicio entidades y separado servicio de main
         </TableRow>
 
     </TableLayout>
