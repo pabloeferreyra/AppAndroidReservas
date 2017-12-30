@@ -4,10 +4,10 @@ var app = express();
 var sql = require('mssql'); // MS Sql Server client
 
 var dbConfig = {
-    user:  "SA",
-    password: "Adminis7ra7or",
-    //server: "192.168.0.6",
-	server: "192.168.1.12",
+    user:  "User",
+    password: "4Dmini57r470r",
+    server: "localhost\\SQLEXPRESS",
+    port: 1433,
     database: "Reservamos"
 };
 
@@ -23,7 +23,7 @@ var server = app.listen(8081, function () {
 app.get('/locales/:id/', function (req, res) {
     sql.connect(dbConfig, function () {
         var request = new sql.Request();
-        var stringRequest = 'select * from [Local] where ID = ' + req.params.id;
+        var stringRequest = 'select * from [Locales] where ID = ' + req.params.id;
         request.query(stringRequest, function (err, recordset) {
             if (err) console.log(err);
             res.end(JSON.stringify(recordset)); // Result in JSON format
@@ -34,7 +34,7 @@ app.get('/locales/:id/', function (req, res) {
 app.get("/locales", function (req, res) {
     sql.connect(dbConfig, function () {
         var request = new sql.Request();
-        request.query('select * from [Local]', function (err, recordset) {
+        request.query('select * from [Locales]', function (err, recordset) {
             if (err) console.log(err);
             res.end(JSON.stringify(recordset)); // Result in JSON format
         });

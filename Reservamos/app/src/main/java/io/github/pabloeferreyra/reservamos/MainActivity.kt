@@ -5,22 +5,25 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.ListView
 import android.widget.Toast
-import io.github.pabloeferreyra.reservamos.entity.Locales
+import io.github.pabloeferreyra.reservamos.Adapters.LocalesAdapter
+import io.github.pabloeferreyra.reservamos.Entity.Locales
 
 import org.java_websocket.client.WebSocketClient
 
 class MainActivity : AppCompatActivity() {
 
-    private val mWebSocketClient: WebSocketClient? = null
-
+    private var mWebSocketClient: WebSocketClient? = null
+    private var viewParts: Runnable? = null
+    private var m_adapter: LocalesAdapter? = null
+    private var listaLocales : ArrayList<Locales?> = ArrayList<Locales?>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val lv: ListView = findViewById(R.id.ListaLocales)
+        val lv: ListView = findViewById(R.id.mainListView)
         val ser: Servicio = Servicio()
-        val listaLocales : ArrayList<Locales?> = ser.getData()
-        var locales = arrayOf(ser.getData())
-
+        listaLocales = ser.getData()
+        m_adapter = LocalesAdapter(this, listaLocales)
+        lv.adapter = m_adapter
     }
 
 

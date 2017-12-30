@@ -1,19 +1,15 @@
 package io.github.pabloeferreyra.reservamos
 
 import android.os.StrictMode
-import io.github.pabloeferreyra.reservamos.entity.Locales
+import io.github.pabloeferreyra.reservamos.Entity.Locales
 import org.json.JSONArray
 import org.json.JSONException
-import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
-import java.lang.reflect.Array
 import java.net.HttpURLConnection
 import java.net.MalformedURLException
 import java.net.URL
-import java.util.*
-import kotlin.collections.ArrayList
 
 /**
  * Created by pablo on 24/12/2017.
@@ -23,7 +19,7 @@ class Servicio {
      fun getData() : ArrayList<Locales?> {
         var jsonArr: JSONArray? = null
         var locales : ArrayList<Locales?> = ArrayList<Locales?>()
-        val dir = "http://192.168.1.11:8081/locales"
+        val dir = "http://192.168.1.6:8081/locales"
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
 
@@ -56,10 +52,11 @@ class Servicio {
 
             for (i in 0..jsonArr.length()) {
                 val JsonObject = jsonArr.getJSONObject(i)
-
-                locales[i]?.Nombre?.plus(JsonObject.optString("Nombre"))
-                locales[i]?.Direccion?.plus(JsonObject.optString("Direccion"))
-                locales[i]?.Valuacion?.plus(JsonObject.optInt("Valuacion"))
+                var locales1 : Locales = Locales()
+                locales1.Nombre = JsonObject.optString("Nombre")
+                locales1.Direccion = JsonObject.optString("Direccion")
+                locales1.Valuacion = JsonObject.optInt("Valuacion")
+                locales.add(locales1)
             }
 
         } catch (e: MalformedURLException) {
