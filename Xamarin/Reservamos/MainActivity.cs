@@ -1,18 +1,24 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Forms.Platform.Android;
+using Xamarin.Forms;
 
 namespace Reservamos
 {
 	[Activity(Label = "Reservamos", MainLauncher = true)]
-	public class MainActivity : Activity
+	public class MainActivity : FormsAppCompatActivity
 	{
-		protected override void OnCreate(Bundle savedInstanceState)
+		protected override void OnCreate(Bundle bundle)
 		{
-			base.OnCreate(savedInstanceState);
+			// set the layout resources first
+			FormsAppCompatActivity.ToolbarResource = Resource.Layout.Toolbar;
+			FormsAppCompatActivity.TabLayoutResource = Resource.Layout.Tabbar;
 
-			// Set our view from the "main" layout resource
-			SetContentView(Resource.Layout.Main);
+			// then call base.OnCreate and the Xamarin.Forms methods
+			base.OnCreate(bundle);
+			Forms.Init(this, bundle);
+			LoadApplication(new App());
 		}
 	}
 }
