@@ -4,16 +4,10 @@ var app = express();
 var sql = require('mssql'); // MS Sql Server client
 
 var dbConfig = {
-<<<<<<< HEAD
     user:  "User",
     password: "4Dmini57r470r",
     server: "localhost\\SQLEXPRESS",
     port: 1433,
-=======
-    user:  "SA",
-    password: "Adminis7ra7or",
-    server: "192.168.0.6",
->>>>>>> parent of a10af16... inicio entidades y separado servicio de main
     database: "Reservamos"
 };
 
