@@ -1,0 +1,2 @@
+D:\Reservamos\AppAndroidReservas\Xamarin\Reservamos\obj\Debug\Reservamos.csprojResolveAssemblyReference.cache
+D:\Reservamos\AppAndroidReservas\Xamarin\Reservamos\obj\Debug\Reservamos.csproj.CoreCompileInputs.cache

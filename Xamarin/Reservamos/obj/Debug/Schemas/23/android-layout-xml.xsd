@@ -5,7 +5,7 @@
   <xs:import schemaLocation="schemas.android.com.tools.xsd" namespace="http://schemas.android.com/tools" />
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>10/1/2018 15:23:42</xs:documentation>
+    <xs:documentation>10/1/2018 15:30:04</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -1500,8 +1500,13 @@
   <xs:complexType name="android.support.design.widget.NavigationView">
     <xs:complexContent mixed="false">
       <xs:extension base="FrameLayout">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:elevation" />
+        <xs:attribute ref="app:menu" />
+        <xs:attribute ref="app:itemIconTint" />
+        <xs:attribute ref="app:itemTextColor" />
+        <xs:attribute ref="app:itemBackground" />
+        <xs:attribute ref="app:itemTextAppearance" />
+        <xs:attribute ref="app:headerLayout" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1526,8 +1531,11 @@
   <xs:complexType name="android.support.design.widget.BottomNavigationView">
     <xs:complexContent mixed="false">
       <xs:extension base="FrameLayout">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:menu" />
+        <xs:attribute ref="app:itemIconTint" />
+        <xs:attribute ref="app:itemTextColor" />
+        <xs:attribute ref="app:itemBackground" />
+        <xs:attribute ref="app:elevation" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1552,8 +1560,20 @@
   <xs:complexType name="android.support.design.widget.TextInputLayout">
     <xs:complexContent mixed="false">
       <xs:extension base="LinearLayout">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:hintTextAppearance" />
+        <xs:attribute ref="app:hintEnabled" />
+        <xs:attribute ref="app:errorEnabled" />
+        <xs:attribute ref="app:errorTextAppearance" />
+        <xs:attribute ref="app:counterEnabled" />
+        <xs:attribute ref="app:counterMaxLength" />
+        <xs:attribute ref="app:counterTextAppearance" />
+        <xs:attribute ref="app:counterOverflowTextAppearance" />
+        <xs:attribute ref="app:hintAnimationEnabled" />
+        <xs:attribute ref="app:passwordToggleEnabled" />
+        <xs:attribute ref="app:passwordToggleDrawable" />
+        <xs:attribute ref="app:passwordToggleContentDescription" />
+        <xs:attribute ref="app:passwordToggleTint" />
+        <xs:attribute ref="app:passwordToggleTintMode" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1565,8 +1585,22 @@
   <xs:complexType name="android.support.design.widget.TabLayout">
     <xs:complexContent mixed="false">
       <xs:extension base="HorizontalScrollView">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:tabIndicatorColor" />
+        <xs:attribute ref="app:tabIndicatorHeight" />
+        <xs:attribute ref="app:tabContentStart" />
+        <xs:attribute ref="app:tabBackground" />
+        <xs:attribute ref="app:tabMode" />
+        <xs:attribute ref="app:tabGravity" />
+        <xs:attribute ref="app:tabMinWidth" />
+        <xs:attribute ref="app:tabMaxWidth" />
+        <xs:attribute ref="app:tabTextAppearance" />
+        <xs:attribute ref="app:tabTextColor" />
+        <xs:attribute ref="app:tabSelectedTextColor" />
+        <xs:attribute ref="app:tabPaddingStart" />
+        <xs:attribute ref="app:tabPaddingTop" />
+        <xs:attribute ref="app:tabPaddingEnd" />
+        <xs:attribute ref="app:tabPaddingBottom" />
+        <xs:attribute ref="app:tabPadding" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1591,8 +1625,14 @@
   <xs:complexType name="android.support.design.widget.FloatingActionButton">
     <xs:complexContent mixed="false">
       <xs:extension base="ImageButton">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:backgroundTint" />
+        <xs:attribute ref="app:backgroundTintMode" />
+        <xs:attribute ref="app:rippleColor" />
+        <xs:attribute ref="app:fabSize" />
+        <xs:attribute ref="app:elevation" />
+        <xs:attribute ref="app:pressedTranslationZ" />
+        <xs:attribute ref="app:borderWidth" />
+        <xs:attribute ref="app:useCompatPadding" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1617,8 +1657,8 @@
   <xs:complexType name="android.support.design.widget.CoordinatorLayout">
     <xs:complexContent mixed="false">
       <xs:extension base="ViewGroup">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:keylines" />
+        <xs:attribute ref="app:statusBarBackground" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1630,8 +1670,8 @@
   <xs:complexType name="android.support.design.widget.Snackbar.SnackbarLayout">
     <xs:complexContent mixed="false">
       <xs:extension base="FrameLayout">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:elevation" />
+        <xs:attribute ref="app:maxActionInlineWidth" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1643,8 +1683,22 @@
   <xs:complexType name="android.support.design.widget.CollapsingToolbarLayout">
     <xs:complexContent mixed="false">
       <xs:extension base="FrameLayout">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:expandedTitleMargin" />
+        <xs:attribute ref="app:expandedTitleMarginStart" />
+        <xs:attribute ref="app:expandedTitleMarginTop" />
+        <xs:attribute ref="app:expandedTitleMarginEnd" />
+        <xs:attribute ref="app:expandedTitleMarginBottom" />
+        <xs:attribute ref="app:expandedTitleTextAppearance" />
+        <xs:attribute ref="app:collapsedTitleTextAppearance" />
+        <xs:attribute ref="app:contentScrim" />
+        <xs:attribute ref="app:statusBarScrim" />
+        <xs:attribute ref="app:toolbarId" />
+        <xs:attribute ref="app:scrimVisibleHeightTrigger" />
+        <xs:attribute ref="app:scrimAnimationDuration" />
+        <xs:attribute ref="app:collapsedTitleGravity" />
+        <xs:attribute ref="app:expandedTitleGravity" />
+        <xs:attribute ref="app:titleEnabled" />
+        <xs:attribute ref="app:title" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1656,8 +1710,8 @@
   <xs:complexType name="android.support.design.widget.AppBarLayout">
     <xs:complexContent mixed="false">
       <xs:extension base="LinearLayout">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:elevation" />
+        <xs:attribute ref="app:expanded" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1682,8 +1736,7 @@
   <xs:complexType name="android.support.design.internal.ScrimInsetsFrameLayout">
     <xs:complexContent mixed="false">
       <xs:extension base="FrameLayout">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:insetForeground" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1708,8 +1761,7 @@
   <xs:complexType name="android.support.design.internal.ForegroundLinearLayout">
     <xs:complexContent mixed="false">
       <xs:extension base="ViewGroup">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:foregroundInsidePadding" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1945,8 +1997,8 @@
   <xs:complexType name="android.support.v7.app.MediaRouteButton">
     <xs:complexContent mixed="false">
       <xs:extension base="View">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:externalRouteEnabledDrawable" />
+        <xs:attribute ref="app:buttonTint" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1971,10 +2023,17 @@
   <xs:complexType name="android.support.v7.widget.SwitchCompat">
     <xs:complexContent mixed="false">
       <xs:extension base="CompoundButton">
-        <xs:attribute ref="android:textEditSuggestionContainerLayout" />
-        <xs:attribute ref="android:textEditSuggestionHighlightStyle" />
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:thumbTint" />
+        <xs:attribute ref="app:thumbTintMode" />
+        <xs:attribute ref="app:track" />
+        <xs:attribute ref="app:trackTint" />
+        <xs:attribute ref="app:trackTintMode" />
+        <xs:attribute ref="app:thumbTextPadding" />
+        <xs:attribute ref="app:switchTextAppearance" />
+        <xs:attribute ref="app:switchMinWidth" />
+        <xs:attribute ref="app:switchPadding" />
+        <xs:attribute ref="app:splitTrack" />
+        <xs:attribute ref="app:showText" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1986,8 +2045,19 @@
   <xs:complexType name="android.support.v7.widget.SearchView">
     <xs:complexContent mixed="false">
       <xs:extension base="ViewGroup">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:layout" />
+        <xs:attribute ref="app:iconifiedByDefault" />
+        <xs:attribute ref="app:queryHint" />
+        <xs:attribute ref="app:defaultQueryHint" />
+        <xs:attribute ref="app:closeIcon" />
+        <xs:attribute ref="app:goIcon" />
+        <xs:attribute ref="app:searchIcon" />
+        <xs:attribute ref="app:searchHintIcon" />
+        <xs:attribute ref="app:voiceIcon" />
+        <xs:attribute ref="app:commitIcon" />
+        <xs:attribute ref="app:suggestionRowLayout" />
+        <xs:attribute ref="app:queryBackground" />
+        <xs:attribute ref="app:submitBackground" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -2041,8 +2111,10 @@
   <xs:complexType name="android.support.v7.widget.LinearLayoutCompat">
     <xs:complexContent mixed="false">
       <xs:extension base="ViewGroup">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:measureWithLargestChild" />
+        <xs:attribute ref="app:divider" />
+        <xs:attribute ref="app:showDividers" />
+        <xs:attribute ref="app:dividerPadding" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -2121,8 +2193,7 @@
   <xs:complexType name="android.support.v7.widget.ButtonBarLayout">
     <xs:complexContent mixed="false">
       <xs:extension base="LinearLayout">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:allowStacking" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -2147,8 +2218,8 @@
   <xs:complexType name="android.support.v7.widget.ActivityChooserView">
     <xs:complexContent mixed="false">
       <xs:extension base="ViewGroup">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:initialActivityCount" />
+        <xs:attribute ref="app:expandActivityOverflowButtonDrawable" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -2251,8 +2322,33 @@
   <xs:complexType name="android.support.v7.widget.Toolbar">
     <xs:complexContent mixed="false">
       <xs:extension base="ViewGroup">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:titleTextAppearance" />
+        <xs:attribute ref="app:subtitleTextAppearance" />
+        <xs:attribute ref="app:title" />
+        <xs:attribute ref="app:subtitle" />
+        <xs:attribute ref="app:titleMargin" />
+        <xs:attribute ref="app:titleMarginStart" />
+        <xs:attribute ref="app:titleMarginEnd" />
+        <xs:attribute ref="app:titleMarginTop" />
+        <xs:attribute ref="app:titleMarginBottom" />
+        <xs:attribute ref="app:titleMargins" />
+        <xs:attribute ref="app:contentInsetStart" />
+        <xs:attribute ref="app:contentInsetEnd" />
+        <xs:attribute ref="app:contentInsetLeft" />
+        <xs:attribute ref="app:contentInsetRight" />
+        <xs:attribute ref="app:contentInsetStartWithNavigation" />
+        <xs:attribute ref="app:contentInsetEndWithActions" />
+        <xs:attribute ref="app:maxButtonHeight" />
+        <xs:attribute ref="app:buttonGravity" />
+        <xs:attribute ref="app:collapseIcon" />
+        <xs:attribute ref="app:collapseContentDescription" />
+        <xs:attribute ref="app:popupTheme" />
+        <xs:attribute ref="app:navigationIcon" />
+        <xs:attribute ref="app:navigationContentDescription" />
+        <xs:attribute ref="app:logo" />
+        <xs:attribute ref="app:logoDescription" />
+        <xs:attribute ref="app:titleTextColor" />
+        <xs:attribute ref="app:subtitleTextColor" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -2264,9 +2360,11 @@
   <xs:complexType name="android.support.v7.widget.RecyclerView">
     <xs:complexContent mixed="false">
       <xs:extension base="ViewGroup">
+        <xs:attribute ref="app:layoutManager" />
+        <xs:attribute ref="app:spanCount" />
+        <xs:attribute ref="app:reverseLayout" />
+        <xs:attribute ref="app:stackFromEnd" />
         <xs:attribute ref="tools:listitem" />
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -2278,8 +2376,17 @@
   <xs:complexType name="android.support.v7.widget.CardView">
     <xs:complexContent mixed="false">
       <xs:extension base="FrameLayout">
-        <xs:attribute ref="android:pointerIcon" />
-        <xs:attribute ref="android:forceHasOverlappingRendering" />
+        <xs:attribute ref="app:cardBackgroundColor" />
+        <xs:attribute ref="app:cardCornerRadius" />
+        <xs:attribute ref="app:cardElevation" />
+        <xs:attribute ref="app:cardMaxElevation" />
+        <xs:attribute ref="app:cardUseCompatPadding" />
+        <xs:attribute ref="app:cardPreventCornerOverlap" />
+        <xs:attribute ref="app:contentPadding" />
+        <xs:attribute ref="app:contentPaddingLeft" />
+        <xs:attribute ref="app:contentPaddingRight" />
+        <xs:attribute ref="app:contentPaddingTop" />
+        <xs:attribute ref="app:contentPaddingBottom" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

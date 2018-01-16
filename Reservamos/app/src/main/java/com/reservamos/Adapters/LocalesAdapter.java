@@ -59,9 +59,7 @@ public class LocalesAdapter extends ArrayAdapter<Locales> {
             // This is how you obtain a reference to the TextViews.
             // These TextViews are created in the XML files we defined.
 
-            TextView tt = (TextView) v.findViewById(R.id.toptext);
             TextView ttd = (TextView) v.findViewById(R.id.toptextdata);
-            TextView mt = (TextView) v.findViewById(R.id.middletext);
             TextView mtd = (TextView) v.findViewById(R.id.middletextdata);
             ImageView imagen = (ImageView) v.findViewById(R.id.imageView);
 
@@ -69,25 +67,20 @@ public class LocalesAdapter extends ArrayAdapter<Locales> {
 
             // check to see if each individual textview is null.
             // if not, assign some text!
-            if (tt != null){
-                tt.setText("Nombre: ");
-            }
             if (ttd != null){
                 ttd.setText(i.getNombre());
-            }
-            if (mt != null){
-                mt.setText("Direccion: ");
             }
             if (mtd != null){
                 mtd.setText(i.getDireccion());
             }
             if (imagen != null){
-                byte[] decodeString = new byte[0];
+                byte[] decodeString  = new byte[0];
                 try {
                     decodeString = Base64.decode(i.getImagen(), Base64.NO_OPTIONS);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+
                 Bitmap decodebitmap = BitmapFactory.decodeByteArray(decodeString,
                        0, decodeString.length);
                 imagen.setImageBitmap(decodebitmap);
